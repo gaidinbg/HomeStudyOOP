@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Athele.cs" />
+    <Compile Include="AutoPerson.cs" />
     <Compile Include="Handler.cs" />
     <Compile Include="IIntroducable.cs" />
+    <Compile Include="LearnDeligate.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="My Extensions.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -27,6 +27,9 @@ namespace HomeStudy1
 
         private Brain brain;
 
+        public MyDelegate onIntroduce;
+        // public event MyDelegate onIntroduce; - ако искаме да закачаме повече от един евент хендлър на едно и също събитие
+
         static Person()
         {
             nationality = "albanian";
@@ -87,7 +90,13 @@ namespace HomeStudy1
         public virtual void IntroduceYourself ()
         {
 
-                        Console.WriteLine("my name ist {0} and my age is {1}, my nationality is {2}. My Brain tells me I'm {3}", name, age, nationality, brain.Think());
+                if(onIntroduce != null)
+                {
+                    onIntroduce("Name:" + Name + "; " +"Age:" + Age);
+                }
+
+                        Console.WriteLine("my name ist {0} and my age is {1}, my nationality is {2}. My Brain tells me I'm {3}",
+                            name, age, nationality, brain.Think());
 
         }
 
